@@ -11,7 +11,7 @@ class Phrase
   end
 
   def word_count
-    words = @string.split(" ")
+    words = @string.split(/\W+/)
     words.each_with_object({}) do |word, obj|
       if obj[word].nil?
         obj[word] = 1
