@@ -28,21 +28,18 @@ class WordCountTest < Minitest::Test
   end
 
   def test_handles_expanded_lists
-    skip
     phrase = Phrase.new("one,\ntwo,\nthree")
     counts = {"one"=>1, "two"=>1, "three"=>1}
     assert_equal counts, phrase.word_count
   end
 
   def test_ignore_punctuation
-    skip
     phrase = Phrase.new("car: carpet as java: javascript!!&@$%^&")
     counts = {"car"=>1, "carpet"=>1, "as"=>1, "java"=>1, "javascript"=>1}
     assert_equal counts, phrase.word_count
   end
 
   def test_include_numbers
-    skip
     phrase = Phrase.new("testing, 1, 2 testing")
     counts = {"testing"=>2, "1"=>1, "2"=>1}
     assert_equal counts, phrase.word_count
