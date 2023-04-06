@@ -6,7 +6,7 @@ To get started with TDD, see the `README.md` file in your
 `ruby/word-count` directory.
 =end
 class Phrase
-  PUNCTUATION_REGEX = /!|@|&|\$|%|\^|:/
+  PUNCTUATION_REGEX = /!|@|&|\$|%|\^|:|\./
   def initialize(string)
     @string = string
   end
